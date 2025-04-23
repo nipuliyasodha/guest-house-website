@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Guest House Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Book Your Stay</h1>
+    <form id="bookingForm">
+      <label>Full Name:</label>
+      <input type="text" name="name" required>
+
+      <label>Age:</label>
+      <input type="number" name="age" required>
+
+      <label>Email:</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number:</label>
+      <input type="tel" name="phone" required>
+
+      <label>Address:</label>
+      <textarea name="address" required></textarea>
+
+      <label>Gender:</label>
+      <div class="radio-group">
+        <input type="radio" name="gender" value="Male" required> Male
+        <input type="radio" name="gender" value="Female"> Female
+      </div>
+
+      <label>Room Type:</label>
+      <select name="roomType" required>
+        <option value="">Select...</option>
+        <option value="Single">Single</option>
+        <option value="Double">Double</option>
+        <option value="Suite">Suite</option>
+      </select>
+
+      <label>Check-in Date:</label>
+      <input type="date" name="checkin" required>
+
+      <label>Check-out Date:</label>
+      <input type="date" name="checkout" required>
+
+      <button type="submit">Submit Booking</button>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
