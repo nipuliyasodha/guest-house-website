@@ -1,0 +1,20 @@
+name: CI
+
+on: [push, pull_request]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install tidy (HTML validator)
+        run: sudo apt-get install -y tidy
+
+      - name: Check HTML syntax
+        run: tidy -e index.html || true
+
+      - name: Lint JS
+        run: |
+          npm install -g jshint
+          jshint script.js || true
